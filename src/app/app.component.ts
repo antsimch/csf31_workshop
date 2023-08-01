@@ -9,13 +9,10 @@ export class AppComponent {
   title = 'csf31_workshop';
 
   itemToAdd: { name: string, quantity: number }[] = [];
-
   inventory: { name: string }[] = [];
-
   receivedItems: { name: string, quantity: number }[] = [];
 
   updateItemsIntoCart(event: string) {
-
     console.log(`itemFromEvent: ${event}`);
     let objFound = this.receivedItems.find(obj => obj.name === event);
     let indexOfObj: number = 0;

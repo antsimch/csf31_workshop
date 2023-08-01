@@ -23,7 +23,7 @@ export class InventoryComponent implements OnInit {
   }
 
   addItemToCart(item: string) {
-    
+    console.log(`itemToAddToCart: ${item}`);
     let objFound = this.items.find(obj => obj.name === item);
     let indexOfObj: number;
 
@@ -31,6 +31,5 @@ export class InventoryComponent implements OnInit {
       indexOfObj = this.items.indexOf(objFound, 0);
 
     this.onAddingToCart.emit(item);
-    console.log(`itemToAddToCart: ${item}`);
   }
 }

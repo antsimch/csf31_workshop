@@ -1,0 +1,22 @@
+<p>cart works!</p>
+
+<div class="container">
+    <div class="row">
+        <table class="table table-primary" *ngIf="cartList.length > 0">
+            <thead>
+                <th>Item: </th>
+                <th>Quantity: </th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of cartList">
+                    <td>{{item.name}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>
+                        <button class="btn btn-primary" (click)="removeItem(item.name)">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
